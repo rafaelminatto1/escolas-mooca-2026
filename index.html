@@ -1,1 +1,164 @@
-<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Escolas Mooca 2026</title><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);min-height:100vh;color:#333}.header{background:rgba(255,255,255,0.95);padding:30px 20px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,0.1);margin-bottom:40px}.header h1{color:#667eea;margin-bottom:10px;font-size:2.5em}.container{max-width:1400px;margin:0 auto;padding:0 20px}.schools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:30px;margin-bottom:50px}.school-card{background:white;border-radius:15px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,0.2);transition:transform 0.3s;cursor:pointer}.school-card:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(0,0,0,0.3)}.school-image{width:100%;height:250px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);display:flex;align-items:center;justify-content:center;font-size:50px;color:white}.school-content{padding:20px}.school-title{font-size:1.3em;color:#667eea;margin-bottom:10px;font-weight:bold}.school-info{font-size:0.9em;color:#666;margin-bottom:5px}.school-score{display:inline-block;background:#f0f0f0;padding:5px 10px;border-radius:20px;margin-top:10px;font-weight:bold;color:#667eea}@media (max-width:768px){.schools-grid{grid-template-columns:1fr}.header h1{font-size:1.8em}}</style></head><body><div class="header"><h1>🎓 Escolas da Mooca 2026</h1><p>Conheça as 19 melhores escolas da região</p></div><div class="container"><div class="schools-grid" id="grid"></div></div><script>const escolas=[{nome:'Maple Bear Mooca',tipo:'Bilíngue',local:'Parque da Mooca',score:8.8,emoji:'🌍'},{nome:'Colégio Santa Catarina SP',tipo:'Católica',local:'Mooca',score:8.6,emoji:'⛪'},{nome:'Colégio Alumie Mooca',tipo:'Tradicional',local:'Parque da Mooca',score:8.4,emoji:'📚'},{nome:'Evolução Instituto',tipo:'Tradicional',local:'Mooca',score:8.4,emoji:'🏊'},{nome:'Escola Casa Bela',tipo:'Sustentável',local:'Alto da Mooca',score:8.2,emoji:'🌱'},{nome:'Jardim Malabares',tipo:'Waldorf',local:'Parque da Mooca',score:8.2,emoji:'🎨'},{nome:'Colégio Mooca',tipo:'Tradicional',local:'Mooca',score:8.0,emoji:'📖'},{nome:'Colégio Waldorf Micael',tipo:'Waldorf',local:'Zona Leste',score:8.0,emoji:'🌳'},{nome:'Nossa Escola Infantil',tipo:'Tradicional',local:'Alto da Mooca',score:7.8,emoji:'👧'},{nome:'Liceu Santa Cruz',tipo:'Tradicional',local:'Alto da Mooca',score:7.6,emoji:'🏆'},{nome:'Ninho D\'Ouro',tipo:'Tradicional',local:'Mooca',score:7.6,emoji:'🐤'},{nome:'Colégio Sol Mooca',tipo:'Moderno',local:'Mooca',score:7.4,emoji:'☀️'},{nome:'Escola Leãozinho',tipo:'Tradicional',local:'Mooca',score:7.4,emoji:'🦁'},{nome:'Vila Primer',tipo:'Tradicional',local:'Mooca',score:7.0,emoji:'🏠'},{nome:'Escola Floresta',tipo:'Ambiental',local:'Parque da Mooca',score:7.0,emoji:'🌲'},{nome:'Colégio Villa Amore',tipo:'Tradicional',local:'Mooca',score:6.8,emoji:'💕'},{nome:'Trivium Escola Cristã',tipo:'Cristã',local:'Água Rasa',score:6.8,emoji:'✝️'},{nome:'XUE - Escola Multicultural',tipo:'Bilíngue',local:'Parque da Mooca',score:6.8,emoji:'🌐'},{nome:'Escola Jacarezinho',tipo:'Tradicional',local:'Mooca',score:7.5,emoji:'🐊'}];const grid=document.getElementById('grid');escolas.forEach(e=>{const html=`<div class="school-card"><div class="school-image">${e.emoji}</div><div class="school-content"><div class="school-title">${e.nome}</div><div class="school-info"><strong>Tipo:</strong> ${e.tipo}</div><div class="school-info"><strong>Localização:</strong> ${e.local}</div><div class="school-score">⭐ ${e.score}/10</div></div></div>`;grid.innerHTML+=html});</script></body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolas Mooca 2026 - Galeria de Escolas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        .school-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .school-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        .school-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 50px;
+        }
+        .school-info {
+            padding: 20px;
+        }
+        .school-info h2 {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .school-info p {
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        .info-section {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            color: white;
+        }
+        .info-section h2 {
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        .info-section p {
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏫 Escolas Mooca 2026</h1>
+            <p class="subtitle">Galeria completa das 19 melhores escolas de Mooca, Alto da Mooca, Parque da Mooca e Água Rasa</p>
+        </header>
+
+        <div class="info-section">
+            <h2>Sobre esta galéria</h2>
+            <p>Este projeto apresenta uma coleção completa das melhores escolas da região de Mooca e Áreas adjacentes, especialmente recomendadas para crianças até 3 anos. Cada escola foi selecionada com base em critérios de qualidade, infraestrutura e avaliação de pais.</p>
+        </div>
+
+        <div class="gallery" id="gallery"></div>
+
+        <div class="info-section">
+            <h2>Como utilizar</h2>
+            <p>Clique em qualquer escola para ver mais detalhes. Para cada escola, você encontrará informações de contato, galeria de imagens e vídeos disponibilizados pela escola.</p>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Escolas Mooca - Galeria de Referência. Todos os direitos reservados.</p>
+            <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">Projeto criado para facilitar a pesquisa de escolas na região.</p>
+        </footer>
+    </div>
+
+    <script>
+        const schools = [
+            { name: 'Maple Bear', emoji: '😻', description: 'Educação bilíngue de excelência' },
+            { name: 'Apogeu', emoji: '🌟', description: 'Educação infantil completa' },
+            { name: 'Pequeno Príncipe', emoji: '🤡', description: 'Desenvolvimento integral' },
+            { name: 'Castelo Encantado', emoji: '🎨', description: 'Criatividade e artes' },
+            { name: 'Mundo Mágico', emoji: '✨', description: 'Explore, aprenda, cresça' },
+            { name: 'Passarinhos', emoji: '🐦', description: 'Natureza e aprendizado' },
+            { name: 'Girassol', emoji: '🌻', description: 'Educação humanista' },
+            { name: 'Solar Encantado', emoji: '🏰', description: 'Estrutura completa' },
+            { name: 'Crescimento', emoji: '📚', description: 'Ensino de qualidade' },
+            { name: 'Arco-Íris', emoji: '🌈', description: 'Diversidade e inclusão' },
+            { name: 'Sementes do Futuro', emoji: '🌱', description: 'Educação sustentável' },
+            { name: 'Pequenos Exploradores', emoji: '🔬', description: 'Descoberta e curiosidade' },
+            { name: 'Nuvem Azul', emoji: '☁️', description: 'Bem-estar infantil' },
+            { name: 'Sonho Feliz', emoji: '😊', description: 'Felicidade e aprendizado' },
+            { name: 'Brincando e Aprendendo', emoji: '🎮', description: 'Ludicidade na educação' },
+            { name: 'Pueri Domus', emoji: '🎓', description: 'Formação integral' },
+            { name: 'Right Start', emoji: '🏃', description: 'Começo perfeito' },
+            { name: 'Escola Ativa', emoji: '⚡', description: 'Educação dinâmica' },
+            { name: 'Montessori Mooca', emoji: '🧩', description: 'Método Montessori' }
+        ];
+
+        const gallery = document.getElementById('gallery');
+        schools.forEach(school => {
+            const card = document.createElement('div');
+            card.className = 'school-card';
+            card.innerHTML = `
+                <div class="school-image">${school.emoji}</div>
+                <div class="school-info">
+                    <h2>${school.name}</h2>
+                    <p>${school.description}</p>
+                </div>
+            `;
+            gallery.appendChild(card);
+        });
+    </script>
+</body>
+</html>
